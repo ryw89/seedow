@@ -75,7 +75,7 @@ class BuildPy(build_py):
 with open('README.md', 'r') as f:
     long_description = f.read()
 
-install_requires = []
+install_requires = ['wikitablescrape']
 
 authors = {'Ryan Whittingham': 'ryanwhittingham89@gmail.com'}
 
