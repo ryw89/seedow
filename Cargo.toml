@@ -1,0 +1,13 @@
+[package]
+name = "seedow"
+version = "0.0.1"
+authors = ["Ryan Whittingham <ryanwhittingham89@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+pyo3 = { version = "0.12.1", features = ["extension-module"] }
+
+[lib]
+name = "seedow_rust"
+path = "lib/rust/lib.rs"
+crate-type = ["cdylib"]

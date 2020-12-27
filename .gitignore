@@ -1,0 +1,12 @@
+*__pycache__*
+*.pyc
+.projectile
+/*.egg-info
+dist/
+build/
+target/
+cache/
+yapf*
+lib/*/*.py
+*.so
+*_wrap.c
