@@ -1,3 +1,3 @@
 """Seedow: Scrape election data out of Wikipedia."""
 
-from . import lib
+from . import classifiers, cleaners, lib, scrapers
