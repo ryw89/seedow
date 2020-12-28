@@ -48,6 +48,7 @@ def run_setup(swig_modules, rust_modules):
         python_requires='>=3.6',
         include_package_data=True,
         package_data={'': ['data/*.txt']},
+        entry_points=entry_points,
         ext_modules=swig_modules,
         rust_extensions=rust_modules,
         cmdclass={
@@ -75,12 +76,20 @@ class BuildPy(build_py):
 with open('README.md', 'r') as f:
     long_description = f.read()
 
-install_requires = ['wikitablescrape']
+install_requires = [
+    'nltk', 'pandas', 'sklearn', 'tqdm', 'wikipedia', 'wikitablescrape'
+]
 
 authors = {'Ryan Whittingham': 'ryanwhittingham89@gmail.com'}
 
 author = ', '.join(list(authors.keys()))
 author_email = ', '.join(list(authors.values()))
+
+entry_points = {
+    'console_scripts': [
+        'seedow-wordcounts=seedow.goodies.__main__:main',
+    ]
+}
 
 swig_modules, rust_modules = install_ext_modules()
 run_setup(swig_modules, rust_modules)
