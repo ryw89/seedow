@@ -3,4 +3,4 @@
 title = "Seedow configuration"
 
 [wikipedia]
-sleep = 0.1  # Time to sleep between Wikpiedia http requests
+sleep = 0.1  # Time to sleep between Wikipedia http requests
