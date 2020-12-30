@@ -16,9 +16,12 @@ from ..lib.py.pkg import get_base_pkg
 
 class Words():
     """Fetch the most common words from election article summaries."""
-    def __init__(self, summaries_data=None):
-        self.urls_data_path = pkg_resources.resource_filename(
-            get_base_pkg(), 'data/urls.txt')
+    def __init__(self, summaries_data=None, urls_data_path=None):
+        if urls_data_path is not None:
+            self.urls_data_path = urls_data_path
+        else:
+            self.urls_data_path = pkg_resources.resource_filename(
+                get_base_pkg(), 'data/urls.txt')
 
         with open(self.urls_data_path) as f:
             self.urls = [
