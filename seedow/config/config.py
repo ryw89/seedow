@@ -46,5 +46,9 @@ class Config():
         try:
             shutil.copy(conf, self.config_path)
         except IOError:
-            os.makedirs(os.path.dirname(self.config_path))
+            try:
+                os.makedirs(os.path.dirname(self.config_path))
+            except FileExistsError:
+                pass
+
             shutil.copy(conf, self.config_path)
