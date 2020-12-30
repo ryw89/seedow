@@ -15,6 +15,10 @@ def get_config(attr):
     return config.__getattr__(attr)
 
 
+def get_wikipedia_sleep():
+    return float(get_config('wikipedia')['sleep'])
+
+
 class Config():
     """Fetch configuration for this package using its config.toml file."""
     def __init__(self):
