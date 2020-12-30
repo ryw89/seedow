@@ -47,7 +47,7 @@ def run_setup(swig_modules, rust_modules):
         install_requires=install_requires,
         python_requires='>=3.6',
         include_package_data=True,
-        package_data={'': ['data/*.txt']},
+        package_data={'': ['data/*.txt', 'data/*.csv']},
         entry_points=entry_points,
         ext_modules=swig_modules,
         rust_extensions=rust_modules,
