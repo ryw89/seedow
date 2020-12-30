@@ -77,7 +77,8 @@ with open('README.md', 'r') as f:
     long_description = f.read()
 
 install_requires = [
-    'nltk', 'pandas', 'sklearn', 'tqdm', 'wikipedia', 'wikitablescrape'
+    'beautifulsoup4', 'nltk', 'pandas', 'sklearn', 'tqdm', 'wikipedia',
+    'wikitablescrape'
 ]
 
 authors = {'Ryan Whittingham': 'ryanwhittingham89@gmail.com'}
@@ -88,6 +89,7 @@ author_email = ', '.join(list(authors.values()))
 entry_points = {
     'console_scripts': [
         'seedow-wordcounts=seedow.goodies.__main__:main',
+        'seedow-templatelinks=seedow.scrapers.__main__:templates',
     ]
 }
 
